@@ -1,0 +1,133 @@
+// General styles, e. g. for the body tag
+@import 'helpers';
+@import 'variables';
+@import 'lib/elements';
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin-top: 60px;
+  height: 100%;
+  font-family: 'ao medium';
+}
+
+h2,h3,h4 {
+  font-family: 'ao medium';
+}
+
+a:hover{
+  color: @magenta;
+}
+
+#main {
+  height: 80%;
+}
+
+.full_height {
+  height: 100%;
+}
+
+.no_margins {
+  margin: 0 !important;
+}
+
+.top_margin {
+  margin-top: 20px !important;
+}
+
+.bottom_margin {
+  margin-bottom: 20px !important;
+}
+
+.large_top_margin {
+  margin-top: 40px !important;
+}
+
+.huge_top_margin {
+  margin-top: 80px !important;
+}
+
+.bottom_margin {
+  margin-bottom: 20px !important;
+}
+
+.tiny_padding {
+  padding: 5px;
+}
+
+.top_padding {
+  padding-top: 20px;
+}
+
+.large_top_padding {
+  padding-top: 40px;
+}
+
+.huge_top_padding {
+  padding-top: 80px;
+}
+
+.bottom_padding {
+  padding-bottom: 20px;
+}
+
+.large_bottom_padding {
+  padding-bottom: 40px;
+}
+
+.huge_bottom_padding {
+  padding-bottom: 80px;
+}
+
+.grey_label {
+  background-color: @grey;
+  padding: 5px;
+}
+
+.yellow_label {
+  background-color: @yellow;
+  padding: 5px;
+}
+
+.magenta_label {
+  background-color: @magenta;
+  padding: 5px;
+}
+
+.cyan_label {
+  background-color: @cyan;
+  padding: 5px;
+}
+
+.grey_text {
+  color: @grey;
+}
+
+.white_text {
+  color: white;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.spinner {
+  width: 200px;
+  margin: auto;
+  padding: 20% 0;
+}

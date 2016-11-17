@@ -1,0 +1,255 @@
+<template name = "mandm">
+
+	<style>
+	.submissionfield {
+		width: 75%;
+		border: 1px solid #999999;
+		padding: 5px;
+		text-align: left;
+		color: black;
+		font-family: "ao light";
+		letter-spacing: 1px;
+	}
+	.no_margins {
+		margin: 0 !important;
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 345%;
+	}
+
+	h3 {
+		width: 75%;
+		margin-left: 12.5%;
+		font-family: "ao light";
+		font-size: 18px;
+		text-align: left;
+	}
+	h4{
+		line-height: 160%;
+	}
+
+	#lefty {
+		background-color: black;
+		height: 2680px;
+		z-index: -10;
+		position: fixed
+	}
+
+	#appTitle {
+		position: fixed;
+		margin: 30vh auto;
+		font-family: "ao light";
+		color: white;
+		letter-spacing: 7px;
+		font-size: 38px;
+		width: 33.33%
+	}
+	#appSubtitle{
+		position: fixed;
+		margin: 44vh auto;
+		font-family: "ao light";
+		color: white;
+		letter-spacing: 2px;
+		font-size: 16px;
+		width: 33.33%;
+	}
+
+	#questions {
+		float: right;
+	}
+
+	.indivQuestion {
+		font-weight: lighter;;
+	}
+	*:focus {
+	outline: none;
+	}
+
+	.shortQ {
+		height: 40px;
+		border: none;
+		border-bottom: grey solid 1px;
+		background-color: white !important;
+		color: black;
+		font-family: "ao light";
+		letter-spacing: 2px;
+	}
+	select {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0px;
+		width: 75%;
+		text-align: center;
+	}
+
+	::-webkit-input-placeholder {
+		 color: #ccc;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		 color: #ccc;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		 color: #ccc;
+	}
+
+	:-ms-input-placeholder {
+		 color: #ccc;
+	}
+
+	button {
+		outline: none;
+		height: 40px;
+		text-align: center;
+		width: 130px;
+		border-radius: 40px;
+		background: #fff;
+		border: 2px solid #ff00ff;
+		color: #ff00ff;
+		letter-spacing: 1px;
+		text-shadow: 0;
+		font-size: 12px;
+		font-weight: bold;
+		cursor: pointer;
+		-webkit-transition: all 0.25s ease;
+		transition: all 0.25s ease;
+	}
+	button:hover {
+		color: white;
+		background: #ff00ff;
+	}
+	button:active {
+		letter-spacing: 2px;
+	}
+	#committeebutton{
+		border: 2px solid #00ffff;
+		color: #00ffff;
+	}
+	#committeebutton:hover{
+		color: white;
+		background: #00ffff;
+	}
+	.onclic {
+		width: 40px;
+		border-color: #bbbbbb;
+		border-width: 3px;
+		font-size: 0;
+		border-left-color: #ff00ff;
+		-webkit-animation: rotating 2s 0.25s linear infinite;
+						animation: rotating 2s 0.25s linear infinite;
+	}
+	.onclic:after {
+		content: "";
+	}
+	.onclic:hover {
+		color: #ff00ff;
+		background: white;
+	}
+	input[type="file"] {
+		margin: 5% 40%;
+	}
+	</style>
+
+
+	<div class = "row">
+		<div id = "lefty" class = "col-md-4 hidden-xs">
+			<h1 id = "appTitle"> MARKETING & MEDIA Q'S </h1>
+			<p id="appSubtitle">You designed a James Franco poster <br> and then he signed it.</p>
+		</div>
+		<div id = "questions" class = "col-md-8">
+			<h1><br>M&M APPLICATION 2016 </h1>
+
+		<form action="https://formspree.io/ao.mmdesign@gmail.com"
+	      method="POST">
+				<h3>If you haven't filled out General Questions, please do so <a href="/general">here</a>.</h3>
+				<hr>
+				<h3 class = "indivQuestion">What's your first and last name?</h3>
+				<input class = "submissionfield shortQ" placeholder = "HI. MY FULL NAME IS:" type="text" name="name"><br>
+
+				<h3 class = "indivQuestion">What is your school email address? </h3>
+				<input class = "submissionfield shortQ" placeholder = "EMAIL ADDRESS" type="text" name="email">
+				<br><small class="form-text text-muted">Why this info again? So the form has your name and email attached in case it gets unattached to your general questions.</small><br>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">You have one week to promote a concert featuring Mac Miller at the Riviera Theatre downtown. What does your campaign look like?</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to two paragraphs." name="macMillerCampaign"></textarea>
+				</div>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">What are your favorite parts of M&M – Dealing with the media? Answering questions from the masses? Organizing/dealing with logistics? Big-picture campaign work? Graphic design? Web coding? Please rank, explain, and talk about your comfort level and experience with each.</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to two paragraphs." name="roleMM"></textarea>
+				</div>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">What purpose do you think A&O ‘s website and social media accounts serve, and how would you use them to their maximum potential?</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to two paragraphs." name="websiteUses"></textarea>
+				</div>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">What do you think of A&O’s brand among the Northwestern community?
+	Be honest. Talk about what could be done to improve our image and brand on campus. If you are a freshman, what are your first impressions of the A&O brand?</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to two paragraphs." name="brand"></textarea>
+				</div>
+
+				<hr>
+				<h3 style="color: #ff00ff">Please choose only one of the roles you see yourself in, and answer the questions for that section.</h3>
+				<hr>
+
+				<h2>Designer</h2>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">Create a poster advertising one of the following: Years & Years, Fetty Wap, or FKA Twigs. JPG or PDF, please. Attach the  le to your email along with your application.</h3>
+					<label>(Email your files to M&M Co-Director: virginiavankeuren2017@u.northwestern.edu)</label>
+		    <!-- <input id = "submit" placeholder = "Submit a file: pdf/jpg" type="file" name="poster"> -->
+				<!-- <input name="image" type="file" /> -->
+				</div>
+
+				<hr>
+
+				<h2>Web Developer</h2>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">If you have coding experience, visit www.aoproductions.net to get a feel for our style and design a splash page for a show downtown at the Riviera Theatre featuring Calvin Harris.</h3>
+					<label>(Email your files to M&M Co-Director: virginiavankeuren2017@u.northwestern.edu)</label>
+				<!-- <input id = "submit" placeholder = "Submit a file: pdf/jpg" type="file" name="websitedesign"><br> -->
+				</div>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">If you have any, include link(s) to web design projects you think exemplify your skills.</h3>
+					<textarea class="submissionfield" rows="2" maxlength="1500" placeholder="Please type in a url. If there are multiple, separate with a <>" name="webdesignLink"></textarea>
+				</div>
+
+				<hr>
+
+				<h2>Social Media Manager</h2>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">Check out A&O’s Facebook and Twitter. What do we do well, and what can we improve, both when promoting a show and between events? What do you think the voice of A&O should sound like?</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit to two paragraphs" name="socialMediaImprove"></textarea>
+				</div>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">A&O has a show featuring Frankie Cosmos at the Riviera downtown, but tickets aren’t selling well. Write a few sample FB posts and tweets to get students excited and promote ticket sales.</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to two paragraphs." name="frankieCosmosCampaign"></textarea>
+				</div>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">An attendee at Blowout didn’t get a floor seat and is upset. She tweets: “@aoproductions SUCKS, I could barely see! NOT going to next year’s Blowout”. How would you tweet back?</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to two paragraphs." name="badRep"></textarea>
+				</div>
+
+			<BR>
+	    <button id="button" type="submit" value="Submit">SUBMIT</button>
+	</form>
+			<hr>
+			<h4>Congrats. You've completed the M&M Application! <br>You shall hear back from us by October 16.</h4>
+			<br>
+				<button onclick="window.location.href='/application'" id="committeebutton">BACK TO QUESTIONS</button>
+	</div>
+</div>
+
+
+
+</template>
