@@ -1,0 +1,821 @@
+<template name="poll">
+
+<script>
+
+
+var bsPlaying = false;
+   var FuturePlaying = false;
+   var BrysonPlaying = false;
+   var CagePlaying = false;
+   var NellyPlaying = false;
+   var JhenePlaying = false;
+   var FettyPlaying = false;
+   var SnoopPlaying = false;
+   var MustardPlaying = false;
+   var The1975Playing = false;
+   var LotusPlaying = false;
+   var GrimesPlaying = false;
+   var RLPlaying = false;
+   var PurityPlaying = false;
+   var ThuggerPlaying = false;
+   var NeighbourhoodPlaying = false;
+   var MacPlaying = false;
+   var AARPlaying = false;
+
+
+   var audio = null;
+
+
+function resetPlayingBools() {
+  "use strict";
+  for (var i = 0; i < allBools.length; i++){
+    allBools[i] = false;
+  }
+}
+
+
+
+
+function switchCagePic() {
+"use strict";
+
+
+  var image = document.getElementById('Cage');
+
+  if (image.src.match("../images/pollpix/Cage-selected")) {
+      image.src = "/Cage.jpg";
+  } else {
+      image.src = "../images/pollpix/Cage-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     CagePlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("CageSong");
+     audio.play();
+     CagePlaying = true;
+   } else {
+     audio = document.getElementById("CageSong");
+     audio.play();
+     CagePlaying = true;
+   }
+}
+
+function switchMustardPic() {
+"use strict";
+
+
+  var image = document.getElementById('Mustard');
+
+  if (image.src.match("../images/pollpix/Mustard-selected")) {
+      image.src = "../images/pollpix/Mustard.jpg";
+  } else {
+      image.src = "../images/pollpix/Mustard-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     MustardPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("MustardSong");
+     audio.play();
+     MustardPlaying = true;
+   } else {
+     audio = document.getElementById("MustardSong");
+     audio.play();
+     MustardPlaying = true;
+   }
+}
+
+function switchFettyPic() {
+"use strict";
+
+
+  var image = document.getElementById('Fetty');
+
+  if (image.src.match("../images/pollpix/Fetty-selected")) {
+      image.src = "../images/pollpix/Fetty.jpg";
+  } else {
+      image.src = "../images/pollpix/Fetty-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     FettyPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("FettySong");
+     audio.play();
+     FettyPlaying = true;
+   } else {
+     audio = document.getElementById("FettySong");
+     audio.play();
+     FettyPlaying = true;
+   }
+}
+
+function switchLotusPic() {
+"use strict";
+
+
+  var image = document.getElementById('Lotus');
+
+  if (image.src.match("../images/pollpix/Lotus-selected")) {
+      image.src = "../images/pollpix/Lotus.jpg";
+  } else {
+      image.src = "../images/pollpix/Lotus-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     LotusPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("LotusSong");
+     audio.play();
+     LotusPlaying = true;
+   } else {
+     audio = document.getElementById("LotusSong");
+     audio.play();
+     LotusPlaying = true;
+   }
+}
+
+function switchGrimesPic() {
+"use strict";
+
+
+  var image = document.getElementById('Grimes');
+
+  if (image.src.match("../images/pollpix/Grimes-selected")) {
+      image.src = "../images/pollpix/Grimes.jpg";
+  } else {
+      image.src = "../images/pollpix/Grimes-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     GrimesPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("GrimesSong");
+     audio.play();
+     GrimesPlaying = true;
+   } else {
+     audio = document.getElementById("GrimesSong");
+     audio.play();
+     GrimesPlaying = true;
+   }
+}
+
+function switchJhenePic() {
+"use strict";
+
+
+  var image = document.getElementById('Jhene');
+
+  if (image.src.match("../images/pollpix/Jhene-selected")) {
+      image.src = "../images/pollpix/Jhene.jpg";
+  } else {
+      image.src = "../images/pollpix/Jhene-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     JhenePlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("JheneSong");
+     audio.play();
+     JhenePlaying = true;
+   } else {
+     audio = document.getElementById("JheneSong");
+     audio.play();
+     JhenePlaying = true;
+   }
+}
+
+function switchMacPic() {
+"use strict";
+
+
+  var image = document.getElementById('Mac');
+
+  if (image.src.match("../images/pollpix/Mac-selected")) {
+      image.src = "../images/pollpix/Mac.jpg";
+  } else {
+      image.src = "../images/pollpix/Mac-selected.jpg";
+  }
+
+if (MacPlaying) {
+     audio.pause();
+     MacPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("MacSong");
+     audio.play();
+     MacPlaying = true;
+   } else {
+     audio = document.getElementById("MacSong");
+     audio.play();
+     MacPlaying = true;
+   }
+}
+
+function switchNellyPic() {
+"use strict";
+
+
+  var image = document.getElementById('Nelly');
+
+  if (image.src.match("../images/pollpix/Nelly-selected")) {
+      image.src = "../images/pollpix/Nelly.jpg";
+  } else {
+      image.src = "../images/pollpix/Nelly-selected.jpg";
+  }
+
+if (NellyPlaying) {
+     audio.pause();
+     NellyPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("NellySong");
+     audio.play();
+     NellyPlaying = true;
+   } else {
+     audio = document.getElementById("NellySong");
+     audio.play();
+     NellyPlaying = true;
+   }
+}
+
+function switchPurityPic() {
+"use strict";
+
+
+  var image = document.getElementById('Purity');
+
+  if (image.src.match("../images/pollpix/Purity-selected")) {
+      image.src = "../images/pollpix/Purity.jpg";
+  } else {
+      image.src = "../images/pollpix/Purity-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     PurityPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("PuritySong");
+     audio.play();
+     PurityPlaying = true;
+   } else {
+     audio = document.getElementById("PuritySong");
+     audio.play();
+     PurityPlaying = true;
+   }
+}
+
+function switchRLPic() {
+"use strict";
+
+
+  var image = document.getElementById('RL');
+
+  if (image.src.match("../images/pollpix/RL-selected")) {
+      image.src = "../images/pollpix/RL.jpg";
+  } else {
+      image.src = "../images/pollpix/RL-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     RLPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("RLSong");
+     audio.play();
+     RLPlaying = true;
+   } else {
+     audio = document.getElementById("RLSong");
+     audio.play();
+     RLPlaying = true;
+   }
+}
+
+function switch1975Pic() {
+"use strict";
+
+
+  var image = document.getElementById('1975');
+
+  if (image.src.match("../images/pollpix/1975-selected")) {
+      image.src = "../images/pollpix/1975.jpg";
+  } else {
+      image.src = "../images/pollpix/1975-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     The1975Playing = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("The1975Song");
+     audio.play();
+     The1975Playing = true;
+   } else {
+     audio = document.getElementById("The1975Song");
+     audio.play();
+     The1975Playing = true;
+   }
+}
+
+function switchAARPic() {
+"use strict";
+
+
+  var image = document.getElementById('AAR');
+
+  if (image.src.match("../images/pollpix/AAR-selected")) {
+      image.src = "../images/pollpix/AAR.jpg";
+  } else {
+      image.src = "../images/pollpix/AAR-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     AARPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("AARSong");
+     audio.play();
+     AARPlaying = true;
+   } else {
+     audio = document.getElementById("AARSong");
+     audio.play();
+     AARPlaying = true;
+   }
+}
+
+function switchNeighbourhoodPic() {
+"use strict";
+
+
+  var image = document.getElementById('Neighbourhood');
+
+  if (image.src.match("../images/pollpix/Neighbourhood-selected")) {
+      image.src = "../images/pollpix/Neighbourhood.jpg";
+  } else {
+      image.src = "../images/pollpix/Neighbourhood-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     NeighbourhoodPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("NeighbourhoodSong");
+     audio.play();
+     NeighbourhoodPlaying = true;
+   } else {
+     audio = document.getElementById("NeighbourhoodSong");
+     audio.play();
+     NeighbourhoodPlaying = true;
+   }
+}
+
+
+function switchSnoopPic() {
+"use strict";
+
+
+  var image = document.getElementById('Snoop');
+
+  if (image.src.match("../images/pollpix/Snoop-selected")) {
+      image.src = "../images/pollpix/Snoop.jpg";
+  } else {
+      image.src = "../images/pollpix/Snoop-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     SnoopPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("SnoopSong");
+     audio.play();
+     SnoopPlaying = true;
+   } else {
+     audio = document.getElementById("SnoopSong");
+     audio.play();
+     SnoopPlaying = true;
+   }
+}
+
+
+function switchBrysonPic() {
+"use strict";
+
+  var image = document.getElementById('Bryson');
+
+  if (image.src.match("../images/pollpix/Bryson-selected")) {
+      image.src = "../images/pollpix/BrysonText.jpg";
+  } else {
+      image.src = "../images/pollpix/Bryson-selected.jpg";
+  }
+
+if (BrysonPlaying) {
+     audio.pause();
+     BrysonPlaying = false;
+   } else if (anythingPlaying()) {
+     audio.pause();
+     audio = document.getElementById("BrysonSong");
+     audio.play();
+     BrysonPlaying = true;
+   } else {
+     audio = document.getElementById("BrysonSong");
+     audio.play();
+     BrysonPlaying = true;
+   }
+}
+
+function switchFuturePic() {
+"use strict";
+
+
+  var image = document.getElementById('Future');
+
+  if (image.src.match("../images/pollpix/Future-selected")) {
+      image.src = "../images/pollpix/Future.jpg";
+  } else {
+      image.src = "../images/pollpix/Future-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     FuturePlaying = false;
+   } else if (BrysonPlaying) {
+     audio.pause();
+     audio = document.getElementById("FutureSong");
+     audio.play();
+     FuturePlaying = true;
+   } else {
+     audio = document.getElementById("FutureSong");
+     audio.play();
+     FuturePlaying = true;
+   }
+}
+
+function switchThuggerPic() {
+"use strict";
+
+
+  var image = document.getElementById('Thugger');
+
+  if (image.src.match("../images/pollpix/Thugger-selected")) {
+      image.src = "../images/pollpix/Thugger.jpg";
+  } else {
+      image.src = "../images/pollpix/Thugger-selected.jpg";
+  }
+
+if (FuturePlaying) {
+     audio.pause();
+     ThuggerPlaying = false;
+   } else if (anythingPlaying()){
+     audio.pause();
+     audio = document.getElementById("ThuggerSong");
+     audio.play();
+     ThuggerPlaying = true;
+   } else {
+     audio = document.getElementById("ThuggerSong");
+     audio.play();
+     ThuggerPlaying = true;
+   }
+}
+
+function StopAudio(){
+  "use strict";
+  audio.pause();
+  if (FuturePlaying){
+    FuturePlaying = false;
+  }
+
+  if (bsPlaying){
+    bsPlaying = false;
+  }
+}
+
+
+</script>
+
+
+  <style>
+
+  @charset "UTF-8";
+  /************&&&&&&~~~~#####~~~~!!!~~~~~#####~~~&&&&&&*************/
+
+  * {
+  	text-align: center;
+  }
+
+  @font-face{
+  	font-family: AO;
+  	src: url(../fonts/Futura/Futura%20Light%20BT.ttf);
+  }
+
+
+
+  #landing {
+      height: 100vh;
+      width:100%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .myButton {
+  	background-color:transparent;
+  	position: relative;
+  	top: 12vh;;
+
+  	border:9px solid #ffffff;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#ffffff;
+  	font-family:Arial;
+  	font-size:17px;
+  	padding:15px 31px;
+  	text-decoration:none;
+  	text-shadow:0px 1px 0px #2f6627;
+  }
+  .myButton:hover {
+  	background-color:transparent;
+  }
+  .myButton:active {
+  	position:relative;
+  	top:1px;
+  }
+
+  #welcome {
+  	height: 100vh;
+  }
+
+  #thumbs {
+      width: 90vw;
+      margin-top:90px;
+      margin-left: auto;
+      margin-right: auto;
+
+       text-align: justify;
+      -ms-text-justify: distribute-all-lines;
+      text-justify: distribute-all-lines;
+  }
+  #thumbs a {
+      vertical-align: top;
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+  }
+
+
+  label > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+  }
+  label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+  }
+  label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    border:2px solid #FFFFFF;
+  }
+
+
+  label {
+  	display: inline-block;
+  	cursor: pointer;
+  	position: relative;
+  	padding-left: 25px;
+  	margin-right: 15px;
+  	font-size: 13px;
+  }
+  .wrapper {
+  	width: 500px;
+  	margin: 50px auto;
+  }
+  input[type=radio],
+  input[type=checkbox] {
+  	display: none;
+  }
+
+  label:before {
+  	content: "";
+  	display: inline-block;
+
+  	width: 16px;
+  	height: 16px;
+
+  	margin-right: 10px;
+  	position: absolute;
+  	left: 0;
+  	bottom: 1px;
+  	background-color: #aaa;
+  	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+  }
+
+
+
+  input[type=checkbox]:checked + label:before {
+  	content: "\2713";
+  	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  	font-size: 15px;
+  	color: #f3f3f3;
+  	text-align: center;
+      line-height: 15px;
+  }
+
+  a:hover {
+  	color:white;
+  }
+
+  #Submit {
+  	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+  	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+  	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+  	color:#FFF;
+  	background-color:#333;
+  	font-family: AO;
+  	font-size:16px;
+  	font-weight:700;
+  	height:36px;
+  	padding:4px 16px;
+  	text-shadow:#FE6 0 1px 0
+  }
+
+  #genres {
+  	height: 100vh;
+  	padding-top: 10px;
+
+  }
+
+  #venues {
+  	padding-top: 10px;
+  	height: 100vh;
+  }
+
+  #artists{
+  		padding-top: 10px;
+  		width: 95%;
+  		margin-left: 2.5%;
+  }
+
+  #welcome {
+  	padding-top: 10px;
+  }
+
+  .venueOption {
+  	display: none;
+  }
+
+  </style>
+
+<div id="landing">
+<h6>FALL</h6><h3>16</h3>
+<h1> AO POLL</h1>
+
+<a href= "#welcome" class = "smoothScroll"> START </a>
+</div>
+
+<div id = "welcome">
+  <h1> TELL US </h1>
+  <h3> ARTISTS, VENUES, MUSIC </h3>
+  <h5> WHAT DO YOU WANT TO SEE FROM AO </h5>
+  <a href = "#artists" class = "smoothScroll"> NEXT </a>
+</div>
+
+<div id = "artists">
+<h4> WHO WOULD YOU LIKE TO SEE PERFORM AT BLOWOUT? <br><br> CHOOSE AS MANY AS YOU LIKE:</h4>
+
+<div id="thumbs">
+
+  <input type="checkbox" class="radio-option" value = "Bryson" name="fb" />
+<img id="Bryson"  src="../images/pollpix/BrysonText.jpg" width="250" height="250" onclick="switchBrysonPic()">
+  <audio id="BrysonSong" src="../songs/dont.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Cage"  name="fb"/>
+  <img id = "Cage" src="../images/pollpix/Cage.jpg" height="250" width="250" alt="lol" onClick="switchCagePic()">
+  <audio id="CageSong" src="Cage.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Mustard"  name="fb"/>
+  <img id = "Mustard" src="../images/pollpix//Mustard.jpg" height="250" width="250" alt="lol" onClick="switchMustardPic()">
+  <audio id="MustardSong" src="Mustard.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Lotus" name="fb"/>
+  <img id = "Lotus" src="../images/pollpix/Lotus.jpg" height="250" width="250" alt="lol" onClick="switchLotusPic()">
+  <audio id="LotusSong" src="Lotus.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Grimes" name="fb"/>
+  <img id="Grimes" src="../images/pollpix/Grimes.jpg" height="250" width="250" alt="lol" onClick="switchGrimesPic()">
+  <audio id="GrimesSong" src="Grimes.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Jhene" name="fb"/>
+  <img id="Jhene" src="../images/pollpix/Jhene.jpg" height="250" width="250" alt="lol" onClick="switchJhenePic()">
+  <audio id="JheneSong" src="Jhene.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Mac" name="fb"/>
+  <img id="Mac" src="../images/pollpix/Mac.jpg" height="250" width="250" alt="lol" onClick="switchMacPic()">
+  <audio id="MacSong" src="Mac.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Nelly" name="fb"/>
+<img id="Nelly" src="../images/pollpix/Nelly.jpg" width="250" height="250" onClick="switchNellyPic()">
+  <audio id="NellySong" src="idfwu.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Purity" name="fb"/>
+  <img id="Purity" src="../images/pollpix/Purity.jpg" height="250" width="250" alt="lol" onClick="switchPurityPic()">
+  <audio id="PuritySong" src="Purity.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "RL" name="fb"/>
+  <img id="RL" src="../images/pollpix/RL.jpg" height="250" width="250" alt="lol" onClick="switchRLPic()">
+  <audio id="RLSong" src="RL.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "1975" name="fb"/>
+  <img id="1975" src="../images/pollpix/1975.jpg" height="250" width="250" alt="lol" onClick="switch1975Pic()">
+  <audio id="1975Song" src="1975.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "AAR" name="fb"/>
+  <img id="AAR" src="../images/pollpix/AAR.jpg" height="250" width="250" onClick="switchAARPic()" alt="lol">
+  <audio id="AARSong" src="AAR.mp3" ></audio>
+
+  <input type="checkbox" class="radio-option" value = "Neighbourhood" name="fb"/>
+  <img id="Neighbourhood" src="../images/pollpix/Neighbourhood.jpg" height="250" width="250" alt="lol" onClick="switchNeighbourhoodPic()">
+  <audio id="NeighbourhoodSong" src="Neighbourhood.mp3" ></audio>
+
+
+
+    <span class="stretch"></span>
+
+    <!-- <label>
+    <input type="button" onClick="StopAudio()"/>
+    <h6>STOP AUDIO</h6>
+    </label> -->
+</div>​
+
+
+<span class="stretch"></span>
+</div>
+
+
+<div id="WhoText"> <h3> WHAT KIND OF MUSIC DO YOU WANT TO HEAR AT BLOWOUT? </h3> <h5> CHOOSE AS MANY AS YOU LIKE:</h5> </div>
+
+<form>
+<div id = "genres">
+  <input type="checkbox" id = "alternative" class="genreBox" name="genre" value="Alternative"> ALTERNATIVE
+  	<label for="alternative"><span></span></label>
+  <input type="checkbox" id = "Blues" class = "genreBox" name="genre" value="Blues"> BLUES
+    <label for="Blues"><span></span></label>
+  <input type="checkbox" id = "Country" class = "genreBox" name="genre" value="Country"> COUNTRY
+    <label for="Country"><span></span></label>
+  <input type="checkbox" id = "Folk" class = "genreBox" name="genre" value="Folk"> FOLK
+    <label for="Folk"><span></span></label>
+<input type="checkbox" id = "Electronic" class = "genreBox" name="genre" value="Electronic"> ELECTRONIC
+    <label for="Electronic"><span></span></label>
+<input type="checkbox" id = "Rap" class = "genreBox" name="genre" value="Rap"> HIP-HOP/RAP
+    <label for="Rap"><span></span></label>
+<input type="checkbox" id = "Indie" class = "genreBox" name="genre" value="Indie"> INDIE
+  	<label for="Indie"><span></span></label>
+  <input type="checkbox" id = "Jazz" class = "genreBox" name="genre" value="Jazz"> JAZZ
+  	<label for="Jazz"><span></span></label>
+  <input type="checkbox" id = "RB" class = "genreBox" name="genre" value="RB"> RB/SOUL
+ 	 <label for="RB"><span></span></label>
+  <input type="checkbox" id = "Rock" class = "genreBox" name="genre" value="Rock"> ROCK
+ 	 <label for="Rock"><span></span></label>
+  <input type="checkbox" id = "Pop" class = "genreBox" name="genre" value="Pop"> POP
+ 	 <label for="Pop"><span></span></label>
+  OTHER <input id="OtherInput" name="genre" placeholder="What Genre?">  <br><br>
+
+  <a href= "#venues" class = "smoothScroll"> NEXT </a>
+
+  </div>
+
+  <div id = "venues">
+  <h3> PICK YOUR FIRST CHOICE FOR VENUE <br> </h3>
+
+  <label>
+  <input type="radio" class="venueOption" value = "Riviera" name="venue"/>
+  <img src="../images/riv.png" height="250" width="250" alt="lol" onmouseover = "this.src='../images/rivTEXT.png'" onMouseOut="this.src='../images/riv.png'">
+</label>
+  <input type="radio" class="venueOption" value = "Welsh-Ryan" name="venue"/>
+  <img src="../images/welsh.png" height="250" width="250" alt="lol" onmouseover = "this.src='../images/welshTEXT.png'" onMouseOut="this.src='../images/welsh.png'">
+
+  <input type="radio" class="venueOption" value = "Aragon" name="venue"/>
+  <img src="../images/aragon.jpg" height="250" width="250" alt="lol" onmouseover = "this.src='../images/aragonTEXT.jpg'" onMouseOut="this.src='../images/aragon.jpg'">
+  <br>
+  <br>
+
+    <input id = "Submit" type="submit" value="SUBMIT">
+    </div>
+</form>
+</template>

@@ -44,6 +44,15 @@ Router.route('/calendar', {
   }
 });
 
+Router.route('/poll', {
+  name: 'Poll',
+  action: function () {
+    this.render('poll');
+    Session.set('page_name','poll');
+    SEO.set({ title: 'poll - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/gallery', {
   name: 'gallery',
   action: function () {
