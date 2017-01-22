@@ -8,14 +8,7 @@ Router.route('/', {
   }
 });
 
-Router.route('/home', {
-  name: 'home',
-  action: function () {
-    this.render('home');
-    Session.set('page_name','productions');
-    SEO.set({ title: 'Home - ' + Meteor.App.NAME });
-  }
-});
+
 
 Router.route('/news', {
   name: 'news',
