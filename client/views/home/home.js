@@ -15,6 +15,7 @@ Template.home.events({
 
 
 Template.home.onRendered(function () {
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
   var owl_options = {
     autoPlay: true,
     pagination:false,
