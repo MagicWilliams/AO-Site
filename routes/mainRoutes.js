@@ -1,14 +1,21 @@
 // Home Route
 Router.route('/', {
-  name: 'home',
+  name: 'Benefit',
   action: function () {
-    this.render('home');
-    Session.set('page_name','home');
+    this.render('benefit');
+    Session.set('page_name','Benefit');
     SEO.set({ title: 'Benefit - ' + Meteor.App.NAME });
   }
 });
 
-
+Router.route('/home', {
+  name: 'Home',
+  action: function () {
+    this.render('home');
+    Session.set('page_name','Home');
+    SEO.set({ title: 'Home - ' + Meteor.App.NAME });
+  }
+});
 
 Router.route('/news', {
   name: 'news',
