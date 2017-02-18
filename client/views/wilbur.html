@@ -1,0 +1,161 @@
+<template name="wilbur">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(".imgB1").hover(function(){
+        $(".imgB1").css("opacity", "1");
+        $(".imgA1").css("opacity", ".2");
+        }, function(){
+        $(".imgB1").css("opacity", "0");
+        $(".imgA1").css("opacity", "1");
+    });
+    
+    $(".imgC1").hover(function(){
+    	  $(".imgC1").css("opacity", "1");
+        $(".imgA1").css("opacity", ".2");
+        }, function(){
+        $(".imgC1").css("opacity", "0");
+        $(".imgA1").css("opacity", "1");
+    });
+
+    $(".imgD1").hover(function(){
+        $(".imgD1").css("opacity", "1");
+        $(".imgA1").css("opacity", ".2");
+        }, function(){
+        $(".imgD1").css("opacity", "0");
+        $(".imgA1").css("opacity", "1");
+    });
+
+});
+</script>
+
+<style>
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33.3vw;
+  overflow: hidden;
+
+}
+
+.panel {
+  display: flex;
+  flex-direction: row;
+  background-image: url("/images/prof.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*/
+
+img {
+  flex: 1 1 auto;
+  position: absolute;
+}
+
+.imgA1 {
+  z-index: 1;
+  width: 100%;
+}
+
+.imgB1 {
+  z-index: 4;
+  opacity: 0;
+  flex: 1 1 auto;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.imgC1 {
+  z-index: 3;
+  opacity: 0;
+  flex: 1 1 auto;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.imgD1 {
+  z-index: 2;
+  opacity: 0;
+  flex: 1 1 auto;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.links {
+  font-size: 32px;
+  padding-top: 5vw;
+  text-align: center;
+}
+
+body {
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  margin: 0;
+}
+
+p {
+  font-family: futura;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: cyan;
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+
+</style>
+
+<div class="panel">
+  <div class="container">
+    <img class="imgB1" src="/images/p1a.gif">
+    <img class="imgB1" src="/images/p1b.gif">
+    <img class="imgB1" src="/images/p1c.gif">
+    <img class="imgB1" src="/images/p1d.gif">
+    <img class="imgB1" src="/images/p1e.gif">
+  </div>
+
+  <div class="container">
+    <img class="imgC1" src="/images/p2a.gif">
+    <img class="imgC1" src="/images/p2b.gif">
+    <img class="imgC1" src="/images/p2c.gif">
+    <img class="imgC1" src="/images/p2d.gif">
+    <img class="imgC1" src="/images/p2e.gif">  
+  </div>
+
+  <div class="container">
+    <img class="imgD1" src="/images/p3a.gif">
+    <img class="imgD1" src="/images/p3b.gif">
+    <img class="imgD1" src="/images/p3c.gif">
+    <img class="imgD1" src="/images/p3d.gif">
+    <img class="imgD1" src="/images/p3e.gif">
+  </div>
+
+</div>
+
+<div class="links">
+  <a href="https://aoproductions.net"><p>Proceed to Site</p></a>
+  <a href="https://nbo.universitytickets.com"><p>Buy Tickets</p></a>
+</div>
+
+</template>
+

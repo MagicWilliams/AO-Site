@@ -8,6 +8,15 @@ Router.route('/', {
   }
 });
 
+Router.route('/wilbur', {
+  name: 'Announcing...',
+  action: function () {
+    this.render('wilbur');
+    Session.set('page_name','Wilbur');
+    SEO.set({ title: 'Winter Speaker - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/news', {
   name: 'news',
   action: function () {
