@@ -1,19 +1,19 @@
 // Home Route
 Router.route('/', {
-  name: 'Home',
-  action: function () {
-    this.render('home');
-    Session.set('page_name','Home');
-    SEO.set({ title: 'Home - ' + Meteor.App.NAME });
-  }
-});
-
-Router.route('/wilbur', {
-  name: 'Announcing...',
+  name: 'Wilbur',
   action: function () {
     this.render('wilbur');
     Session.set('page_name','Wilbur');
-    SEO.set({ title: 'Winter Speaker - ' + Meteor.App.NAME });
+    SEO.set({ title: 'Wilbur - ' + Meteor.App.NAME });
+  }
+});
+
+Router.route('/home', {
+  name: 'home',
+  action: function () {
+    this.render('home');
+    Session.set('page_name','home');
+    SEO.set({ title: 'Home - ' + Meteor.App.NAME });
   }
 });
 
