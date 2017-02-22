@@ -3,8 +3,8 @@ Router.route('/', {
   name: 'Wilbur',
   action: function () {
     this.render('wilbur');
-    Session.set('page_name','Wilbur');
-    SEO.set({ title: 'Wilbur - ' + Meteor.App.NAME });
+    Session.set('page_name','Winter Speaker');
+    SEO.set({ title: 'Winter Speaker - ' + Meteor.App.NAME });
   }
 });
 
