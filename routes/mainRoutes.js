@@ -8,6 +8,15 @@ Router.route('/', {
   }
 });
 
+Router.route('/krabz', {
+    name: 'Krabz',
+    action: function () {
+        this.render('krabz');
+        Session.set('page_name', 'Spring Films Speaker');
+        SEO.set({ title: 'Spring Speaker - ' + Meteor.App.NAME });
+    }
+});
+
 Router.route('/home', {
   name: 'home',
   action: function () {
