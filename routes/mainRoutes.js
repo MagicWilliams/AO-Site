@@ -1,14 +1,5 @@
 // Home Route
 Router.route('/', {
-  name: 'Wilbur',
-  action: function () {
-    this.render('wilbur');
-    Session.set('page_name','Winter Speaker');
-    SEO.set({ title: 'Winter Speaker - ' + Meteor.App.NAME });
-  }
-});
-
-Router.route('/krabz', {
     name: 'Krabz',
     action: function () {
         this.render('krabz');
