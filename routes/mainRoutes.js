@@ -3,7 +3,7 @@ Router.route('/', {
     name: 'Krabz',
     action: function () {
         this.render('krabz');
-        Session.set('page_name', 'Spring Films Speaker');
+        Session.set('page_name', 'Spring Speaker');
         SEO.set({ title: 'Spring Speaker - ' + Meteor.App.NAME });
     }
 });
