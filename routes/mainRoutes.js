@@ -1,11 +1,11 @@
 // Home Route
 Router.route('/', {
-  name: 'Wilbur',
-  action: function () {
-    this.render('wilbur');
-    Session.set('page_name','Winter Speaker');
-    SEO.set({ title: 'Winter Speaker - ' + Meteor.App.NAME });
-  }
+    name: 'Krabz',
+    action: function () {
+        this.render('krabz');
+        Session.set('page_name', 'Spring Speaker');
+        SEO.set({ title: 'Spring Speaker - ' + Meteor.App.NAME });
+    }
 });
 
 Router.route('/home', {
