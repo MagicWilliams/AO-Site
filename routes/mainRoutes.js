@@ -1,5 +1,8 @@
 // Home Route
-Router.route('/', {
+// USE THIS MODEL BELOW FOR UPDATING ANNOUNCEMENT LANDING PAGES
+/*     
+  Landing Page Route
+
     name: 'Krabz',
     action: function () {
         this.render('krabz');
@@ -8,7 +11,19 @@ Router.route('/', {
     }
 });
 
+  Move Normal homepage to a different route
 Router.route('/home', {
+  name: 'home',
+  action: function () {
+    this.render('home');
+    Session.set('page_name','home');
+    SEO.set({ title: 'Home - ' + Meteor.App.NAME });
+  }
+});
+
+ */
+
+Router.route('/', {
   name: 'home',
   action: function () {
     this.render('home');
