@@ -32,7 +32,7 @@ Router.route('/', {
   }
 });
 
-Router.route('/tease', {
+Router.route('/teaser', {
   name: 'teaser',
   action: function () {
     this.render('teaser');
