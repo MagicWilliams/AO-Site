@@ -32,6 +32,15 @@ Router.route('/', {
   }
 });
 
+Router.route('/tease', {
+  name: 'teaser',
+  action: function () {
+    this.render('teaser');
+    Session.set('page_name','Announcing..');
+    SEO.set({ title: 'Announcing... - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/news', {
   name: 'news',
   action: function () {
