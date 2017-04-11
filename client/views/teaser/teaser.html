@@ -2,14 +2,13 @@
 	
 
 	<script type="text/javascript">
-		$('a[href*=#]').click(function(){
-		  return false;
-		});
 		  
 		var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 		var Person = {
+
 		  wrap: $('#people'),
+
 		  people: [
 		    {
 		      name: 'Sean',
@@ -31,11 +30,14 @@
 		      age: 29,
 		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
 		    }
-		  ],   
+		  ],
+
 		  add: function(){
-		    var random =     this.people[Math.floor(Math.random() * this.people.length)];
+		    var random =  this.people[Math.floor(Math.random() * this.people.length)];
+		    
 		    this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong>, " + random.age + "</span></div>");
 		  }
+
 		}
 
 		var App = {
@@ -49,7 +51,7 @@
 		  	} else {
 		  		var animate = "animateNo";
 		  	}
-		  	
+
 		    var self = this;
 		    Person.add();
 		    if (!this.blocked) {
