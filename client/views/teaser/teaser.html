@@ -96,9 +96,9 @@
 
 		  add: function(){
 		    var random =  this.people[Math.floor(Math.random() * this.people.length)];
-		    this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong>, " + random.age + "</span></div>");
-		    peopleSoFar.push(random.name)
-		    current = peopleSoFar[count];
+		    this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span ><strong id = 'artist'>" + random.name + "</strong>, " + random.age + "</span></div>");
+		    peopleSoFar.push(document.getElementById("artist").innerHTML)
+		    current = document.getElementById("artist").innerHTML
 		    console.log(current);
 		  }, 
 
@@ -110,7 +110,6 @@
 		  noButton: $('.button.no .trigger'),
 		  blocked: false,
 		  like: function(liked){
-		  	count++;
 
 		  	if (liked) {
 		  		var animate = "animateYes";
@@ -123,6 +122,7 @@
 
 		    var self = this;
 		    Person.add();
+		    count++;
 		    if (!this.blocked) {
 		      this.blocked = true;          
 		      $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
