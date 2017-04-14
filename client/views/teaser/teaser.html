@@ -2,9 +2,11 @@
 	
 
 	<script type="text/javascript">
-		  
+		
 		var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-
+		var peopleSoFar = [];
+		var count = 0;
+		var current = "";
 		var Person = {
 
 		  wrap: $('#people'),
@@ -29,14 +31,77 @@
 		      name: 'Jeremih',
 		      age: 29,
 		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
+		    },
+		    {
+		      name: 'Sean',
+		      age: 27,
+		      img: "http://thedrop.fm/files/2012/12/big-sean-e1356726607808.jpg"
+		    },
+		    {
+		      name: 'T. Chainsmokers',
+		      age: 24,
+		      img: "https://s-media-cache-ak0.pinimg.com/736x/fc/96/0a/fc960a87f7dab9846ab4c4e79331642a.jpg"
+		    },
+		    {
+		      name: 'DRAM',
+		      age: 28,
+		      img: "http://www.aceshowbiz.com/images/photo/d_r_a_m_.jpg"
+		    },
+		    {
+		      name: 'Jeremih',
+		      age: 29,
+		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
+		    },
+		    {
+		      name: 'Sean',
+		      age: 27,
+		      img: "http://thedrop.fm/files/2012/12/big-sean-e1356726607808.jpg"
+		    },
+		    {
+		      name: 'T. Chainsmokers',
+		      age: 24,
+		      img: "https://s-media-cache-ak0.pinimg.com/736x/fc/96/0a/fc960a87f7dab9846ab4c4e79331642a.jpg"
+		    },
+		    {
+		      name: 'DRAM',
+		      age: 28,
+		      img: "http://www.aceshowbiz.com/images/photo/d_r_a_m_.jpg"
+		    },
+		    {
+		      name: 'Jeremih',
+		      age: 29,
+		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
+		    },
+		    {
+		      name: 'Sean',
+		      age: 27,
+		      img: "http://thedrop.fm/files/2012/12/big-sean-e1356726607808.jpg"
+		    },
+		    {
+		      name: 'T. Chainsmokers',
+		      age: 24,
+		      img: "https://s-media-cache-ak0.pinimg.com/736x/fc/96/0a/fc960a87f7dab9846ab4c4e79331642a.jpg"
+		    },
+		    {
+		      name: 'DRAM',
+		      age: 28,
+		      img: "http://www.aceshowbiz.com/images/photo/d_r_a_m_.jpg"
+		    },
+		    {
+		      name: 'Jeremih',
+		      age: 29,
+		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
 		    }
 		  ],
 
 		  add: function(){
 		    var random =  this.people[Math.floor(Math.random() * this.people.length)];
-		    
 		    this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong>, " + random.age + "</span></div>");
-		  }
+		    peopleSoFar.push(random.name)
+		    current = peopleSoFar[count];
+		    console.log(current);
+		  }, 
+
 
 		}
 
@@ -45,9 +110,13 @@
 		  noButton: $('.button.no .trigger'),
 		  blocked: false,
 		  like: function(liked){
+		  	count++;
 
 		  	if (liked) {
 		  		var animate = "animateYes";
+		  		if (current  === "Jeremih"){
+		  			window.location.href = "http://localhost:3000/";
+		  		}
 		  	} else {
 		  		var animate = "animateNo";
 		  	}
@@ -97,6 +166,7 @@
 		  Person.add();
 		  Person.add();
 		  Person.add();
+
 		});
 	</script>
 	<style>
