@@ -33,9 +33,9 @@
 		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
 		    },
 		    {
-		      name: 'Sean',
-		      age: 27,
-		      img: "http://thedrop.fm/files/2012/12/big-sean-e1356726607808.jpg"
+		      name: 'Joey',
+		      age: 23,
+		      img: "https://images.genius.com/7ee40c626e7ce2a51344dd680b9ae4c2.1000x1000x1.jpg"
 		    },
 		    {
 		      name: 'T. Chainsmokers',
@@ -43,9 +43,9 @@
 		      img: "https://s-media-cache-ak0.pinimg.com/736x/fc/96/0a/fc960a87f7dab9846ab4c4e79331642a.jpg"
 		    },
 		    {
-		      name: 'DRAM',
-		      age: 28,
-		      img: "http://www.aceshowbiz.com/images/photo/d_r_a_m_.jpg"
+		      name: 'Flying',
+		      age: 27,
+		      img: "https://a3-images.myspacecdn.com/images03/34/ab459fe2483d4f2ba74117f979e5a2c3/300x300.jpg"
 		    },
 		    {
 		      name: 'Jeremih',
@@ -58,14 +58,14 @@
 		      img: "http://thedrop.fm/files/2012/12/big-sean-e1356726607808.jpg"
 		    },
 		    {
-		      name: 'T. Chainsmokers',
-		      age: 24,
-		      img: "https://s-media-cache-ak0.pinimg.com/736x/fc/96/0a/fc960a87f7dab9846ab4c4e79331642a.jpg"
+		      name: 'Calvin',
+		      age: 25,
+		      img: "https://pbs.twimg.com/profile_images/834608118352850944/qXGbnF5X.jpg"
 		    },
 		    {
-		      name: 'DRAM',
-		      age: 28,
-		      img: "http://www.aceshowbiz.com/images/photo/d_r_a_m_.jpg"
+		      name: 'Childish',
+		      age: 32,
+		      img: "https://images.genius.com/54176aed36cb6114bc46f0b70b8b02b3.1000x1000x1.jpg"
 		    },
 		    {
 		      name: 'Jeremih',
@@ -73,19 +73,19 @@
 		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
 		    },
 		    {
-		      name: 'Sean',
-		      age: 27,
-		      img: "http://thedrop.fm/files/2012/12/big-sean-e1356726607808.jpg"
+		      name: 'Jeremih',
+		      age: 29,
+		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
 		    },
 		    {
-		      name: 'T. Chainsmokers',
-		      age: 24,
-		      img: "https://s-media-cache-ak0.pinimg.com/736x/fc/96/0a/fc960a87f7dab9846ab4c4e79331642a.jpg"
+		      name: 'Jeremih',
+		      age: 29,
+		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
 		    },
 		    {
-		      name: 'DRAM',
-		      age: 28,
-		      img: "http://www.aceshowbiz.com/images/photo/d_r_a_m_.jpg"
+		      name: 'Jeremih',
+		      age: 29,
+		      img: "http://www.sohh.com/wp-content/uploads/2014/06/jeremih-2011-01-14-300x300.jpg"
 		    },
 		    {
 		      name: 'Jeremih',
@@ -95,10 +95,14 @@
 		  ],
 
 		  add: function(){
+
 		    var random =  this.people[Math.floor(Math.random() * this.people.length)];
+		    while (count < 5 && random.name === "Jeremih"){
+				random =  this.people[Math.floor(Math.random() * this.people.length)];
+			} 
 		    this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span ><strong id = 'artist'>" + random.name + "</strong>, " + random.age + "</span></div>");
-		    peopleSoFar.push(document.getElementById("artist").innerHTML)
-		    current = document.getElementById("artist").innerHTML
+		    peopleSoFar.push(random.name)
+		    current = peopleSoFar[count+1];
 		    console.log(current);
 		  }, 
 
@@ -112,10 +116,13 @@
 		  like: function(liked){
 
 		  	if (liked) {
-		  		var animate = "animateYes";
-		  		if (current  === "Jeremih"){
+		  			if (document.getElementById("artist").innerHTML  === "Jeremih"){
 		  			window.location.href = "http://localhost:3000/";
-		  		}
+		  			} else {
+		  				var animate = "animateYes"
+		  			}
+		  		
+		  		
 		  	} else {
 		  		var animate = "animateNo";
 		  	}
@@ -186,13 +193,14 @@
 		}
 
 		body {
-		  background: #eee;
+		  background-image: url(/images/bkg.jpg);
+		  background-size: cover;
 		}
 
 		#phone {
 		  width: 320px;
 		  height: 560px;
-		  background: #dfdfdf;
+		  background: #292929;
 		  margin: 0 auto;
 		  border-radius: 25px;
 		  position: relative;
@@ -203,7 +211,7 @@
 		  content: '';
 		  display: block;
 		  position: absolute;
-		  background: #d3d3d3;
+		  background: #000000;
 		  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(255, 255, 255, 0.25);
 		}
 		#phone:after {
