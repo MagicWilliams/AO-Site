@@ -23,7 +23,7 @@ Router.route('/home', {
 
  */
 
-Router.route('/', {
+Router.route('/home', {
   name: 'home',
   action: function () {
     this.render('home');
@@ -32,11 +32,11 @@ Router.route('/', {
   }
 });
 
-Router.route('/teaser', {
-  name: 'teaser',
+Router.route('/', {
+  name: 'Announcement!',
   action: function () {
     this.render('teaser');
-    Session.set('page_name','Announcing..');
+    Session.set('page_name','Announcing...');
     SEO.set({ title: 'Announcing... - ' + Meteor.App.NAME });
   }
 });
