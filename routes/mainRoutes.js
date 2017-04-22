@@ -23,21 +23,13 @@ Router.route('/home', {
 
  */
 
-Router.route('/home', {
-  name: 'home',
-  action: function () {
-    this.render('home');
-    Session.set('page_name','home');
-    SEO.set({ title: 'Home - ' + Meteor.App.NAME });
-  }
-});
 
 Router.route('/', {
-  name: 'Announcement!',
+  name: 'Home',
   action: function () {
-    this.render('teaser');
-    Session.set('page_name','Announcing...');
-    SEO.set({ title: 'Announcing... - ' + Meteor.App.NAME });
+    this.render('home');
+    Session.set('page_name','Home');
+    SEO.set({ title: 'Home - ' + Meteor.App.NAME });
   }
 });
 
