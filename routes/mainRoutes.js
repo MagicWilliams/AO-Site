@@ -1,17 +1,16 @@
 // Home Route
-// USE THIS MODEL BELOW FOR UPDATING ANNOUNCEMENT LANDING PAGES
-/*     
-  Landing Page Route
-
-    name: 'Krabz',
+// USE THIS MODEL BELOW FOR UPDATING ANNOUNCEMENT LANDING PAGES  
+//Landing Page Route
+Router.route('/blossom', { 
+    name: 'blossom',
     action: function () {
-        this.render('krabz');
-        Session.set('page_name', 'Spring Speaker');
-        SEO.set({ title: 'Spring Speaker - ' + Meteor.App.NAME });
+        this.render('blossom');
+        Session.set('page_name', 'A Night of Comedy');
+        SEO.set({ title: 'A Night of Comedy - ' + Meteor.App.NAME });
     }
 });
 
-  Move Normal homepage to a different route
+//Move Normal homepage to a different route
 Router.route('/home', {
   name: 'home',
   action: function () {
@@ -21,9 +20,7 @@ Router.route('/home', {
   }
 });
 
- */
-
-
+/*
 Router.route('/', {
   name: 'Home',
   action: function () {
@@ -32,6 +29,7 @@ Router.route('/', {
     SEO.set({ title: 'Home - ' + Meteor.App.NAME });
   }
 });
+*/
 
 Router.route('/news', {
   name: 'news',
