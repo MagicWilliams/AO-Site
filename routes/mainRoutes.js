@@ -1,7 +1,7 @@
 // Home Route
 // USE THIS MODEL BELOW FOR UPDATING ANNOUNCEMENT LANDING PAGES  
 //Landing Page Route
-Router.route('/blossom', { 
+Router.route('/', { 
     name: 'blossom',
     action: function () {
         this.render('blossom');
