@@ -1,0 +1,107 @@
+<template name="blossom">
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+
+function PlaySound(soundobj) {
+  var thissound=document.getElementById(soundobj);
+  thissound.play();
+}
+
+function StopSound(soundobj) {
+  var thissound=document.getElementById(soundobj);
+  thissound.pause();
+  thissound.currentTime = 0;
+}
+
+</script>
+
+
+<style>
+
+.panel {
+  display: flex;
+  flex-direction: row;
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  margin: 0;
+}
+
+.imgA {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.imgB {
+	flex: 1 1 auto;
+	width: 100%
+}
+
+.links {
+  font-size: 32px;
+  padding-top: 5vw;
+  text-align: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+body {
+  background-color: #333333;
+}
+
+p {
+  font-family: futura;
+}
+
+.info {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: magenta;
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="panel">
+	<img class="imgA" src="./images/chris.png" onmouseover="PlaySound('chrisA')" onmouseout="StopSound('chrisA')">
+	<div class="links">
+    <p class="info">Lutkin Hall</p>
+    <p class="info">May 15th, 7PM</p>
+    <a href="https://nbo.universitytickets.com"><p>Buy Tickets</p></a>
+    <a href="aoproductions.net/home"><p>Proceed to Site</p></a>
+	</div>
+	<img class="imgB" src="./images/question.png" onmouseover="PlaySound('aparnaA')" onmouseout="StopSound('aparnaA')">
+</div>
+
+<audio id='aparnaA' src='./other/laughtrack.mp3'> </audio>
+<audio id='chrisA' src='./other/Chris.mp3'> </audio>
+
+</body>
+
+</template>
+
+
